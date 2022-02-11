@@ -24,9 +24,6 @@ class Blockchain:
         return block 
 
     def _hash(self, block: dict) -> str:
-        """
-        Hash a block and return the cryptographic hash of the block
-        """
         encoded_block = _json.dumps(block, sort_keys= True).encode()
 
         return _hashlib.sha256(encoded_block).hexdigest()
